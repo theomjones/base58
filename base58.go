@@ -5,10 +5,10 @@ import (
 	"strings"
 )
 
-const Alpha = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz"
+const an = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz"
 
 func createString() []string {
-	ss := strings.Split(Alpha, "")
+	ss := strings.Split(an, "")
 	return ss
 }
 
@@ -37,14 +37,13 @@ func Encode(n int) string {
 }
 
 func Decode(s string) int {
-	// 2, j - 1, 42 = 100
 	ss := strings.Split(s, "")
 	var ii []int
 
 	var iiRev []int
 
 	for _, char := range ss {
-		ii = append(ii, strings.Index(Alpha, char))
+		ii = append(ii, strings.Index(an, char))
 	}
 
 	for _, num := range ii {
