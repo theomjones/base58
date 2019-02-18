@@ -12,7 +12,7 @@ func createString() []string {
 	return ss
 }
 
-// Encode encodes an unsigned integer to base58.
+// Encode encodes an integer to base58.
 func Encode(n int) string {
 
 	ss := createString()
@@ -36,6 +36,7 @@ func Encode(n int) string {
 	return strings.Join(sl, "")
 }
 
+// Decode decodes a string returning the decoded integer.
 func Decode(s string) int {
 	ss := strings.Split(s, "")
 	var ii []int
