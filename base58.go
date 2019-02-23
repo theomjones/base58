@@ -1,3 +1,6 @@
+// Package base58 provides an interface
+// for encoding and decoding strings into
+// flickr flavoured base58 encoding
 package base58
 
 import (
@@ -12,7 +15,8 @@ func createString() []string {
 	return ss
 }
 
-// Encode encodes an integer to base58.
+// Encode encodes an integer to
+// base58 string.
 func Encode(n int) string {
 
 	ss := createString()
@@ -36,7 +40,8 @@ func Encode(n int) string {
 	return strings.Join(sl, "")
 }
 
-// Decode decodes a string returning the decoded integer.
+// Decode decodes a base58 encoded
+// string returning the decoded integer.
 func Decode(s string) int {
 	ss := strings.Split(s, "")
 	var ii []int
